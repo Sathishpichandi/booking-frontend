@@ -28,27 +28,27 @@ function BookingHistory() {
       };
 
       const flights = await axios.get(
-        "http://localhost:8081/api/bookings/my",
+        "https://booking-backend-1-mon5.onrender.com/api/bookings/my",
         { headers }
       );
 
       const trains = await axios.get(
-        "http://localhost:8081/api/train-bookings/my",
+        "https://booking-backend-1-mon5.onrender.com/api/train-bookings/my",
         { headers }
       );
 
       const buses = await axios.get(
-        "http://localhost:8081/api/bus-bookings/my",
+        "https://booking-backend-1-mon5.onrender.com/api/bus-bookings/my",
         { headers }
       );
 
       const hotels = await axios.get(
-        "http://localhost:8081/api/hotel-bookings/my",
+        "https://booking-backend-1-mon5.onrender.com/api/hotel-bookings/my",
         { headers }
       );
 
       const cars = await axios.get(
-        "http://localhost:8081/api/car-bookings/my",
+        "https://booking-backend-1-mon5.onrender.com/api/car-bookings/my",
         { headers }
       );
 

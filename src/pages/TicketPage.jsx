@@ -32,7 +32,7 @@ function TicketPage() {
       if (type === "CAR") url = `/api/car-bookings/${bookingId}`;
 
       const res = await axios.get(
-        `http://localhost:8081${url}`,
+        `https://booking-backend-1-mon5.onrender.com${url}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

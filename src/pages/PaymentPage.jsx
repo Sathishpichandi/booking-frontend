@@ -27,7 +27,7 @@ function PaymentPage() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:8081/api/payments",
+        "https://booking-backend-1-mon5.onrender.com/api/payments",
         null,
         {
           params: {

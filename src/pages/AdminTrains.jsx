@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const API = "http://localhost:8081/api/admin/trains";
+const API = "https://booking-backend-1-mon5.onrender.com/api/admin/trains";
 
 function AdminTrains() {
 

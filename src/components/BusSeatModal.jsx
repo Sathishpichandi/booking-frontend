@@ -15,7 +15,7 @@ function BusSeatModal({ bus, onClose, onConfirm }) {
     const token = localStorage.getItem("token");
 
     axios.get(
-      `http://localhost:8081/api/bus-bookings/bus/${bus.id}/seats`,
+      `https://booking-backend-1-mon5.onrender.com/api/bus-bookings/bus/${bus.id}/seats`,
       {
         headers: {
           Authorization: `Bearer ${token}`

@@ -29,7 +29,7 @@ function AdminDashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/admin/dashboard", {
+      .get("https://booking-backend-1-mon5.onrender.com/api/admin/dashboard", {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then((res) => setData(res.data))

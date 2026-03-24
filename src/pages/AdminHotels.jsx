@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const HOTEL_API = "http://localhost:8081/api/admin/hotels";
+const HOTEL_API = "https://booking-backend-1-mon5.onrender.com/api/admin/hotels";
 
 function AdminHotels() {
 

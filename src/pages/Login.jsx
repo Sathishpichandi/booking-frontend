@@ -27,7 +27,7 @@ function AuthPage() {
     try {
       if (isLogin) {
         const res = await axios.post(
-          "http://localhost:8081/api/auth/login",
+          "https://booking-backend-1-mon5.onrender.com/api/auth/login",
           {
             email: form.email,
             password: form.password
@@ -44,7 +44,7 @@ function AuthPage() {
 
       } else {
         await axios.post(
-          "http://localhost:8081/api/auth/register",
+          "https://booking-backend-1-mon5.onrender.com/api/auth/register",
           form
         );
 
