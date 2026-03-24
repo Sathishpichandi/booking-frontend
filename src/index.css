@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional smooth font */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 🔥 Animated Gradient Background */
+
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #111827,
+    #1e1b4b
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Extra glow layer */
+.glow-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(
+    circle at 20% 30%,
+    rgba(59,130,246,0.4),
+    transparent 40%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(168,85,247,0.4),
+    transparent 40%
+  );
+  filter: blur(120px);
+}
+
+.input {
+  @apply bg-slate-800 p-2 rounded text-white border border-slate-700;
+}
+
+.input {
+  padding: 12px;
+  border-radius: 8px;
+  background: #1e293b;
+  border: 1px solid #334155;
+}
