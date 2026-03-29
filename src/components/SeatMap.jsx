@@ -16,7 +16,7 @@ function SeatMap({ flightId, rows = 8, columns = ["A","B","C","D","E","F"], onSe
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `http://https://booking-backend-1-mon5.onrender.com/api/bookings/seats/${flightId}`,
+        `https://booking-backend-1-mon5.onrender.com/api/bookings/seats/${flightId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
