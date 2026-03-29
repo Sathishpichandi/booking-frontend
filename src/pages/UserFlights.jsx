@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import MainLayout from "../components/MainLayout";
 import { getAllFlights, searchFlights, bookFlight } from "../api/flightService";
 import FlightBookingModal from "../components/FlightBookingModal";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function UserFlights() {
+
+  const navigate = useNavigate(); // ✅ ADD THIS
 
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
@@ -62,8 +65,11 @@ function UserFlights() {
 
       setSelectedFlight(null);
 
-      // redirect to payment page
-     window.location.href = `/payment?bookingId=${booking.bookingId}&amount=${booking.flight.price}&type=FLIGHT`;
+      // ✅ FIXED REDIRECT (IMPORTANT)
+      navigate(
+        `/payment?bookingId=${booking.bookingId}&amount=${booking.flight.price}&type=FLIGHT`
+      );
+
     } catch (err) {
 
       console.error(err);
@@ -75,6 +81,7 @@ function UserFlights() {
       }
     }
   };
+
   return (
     <MainLayout>
       <div className="text-white">
